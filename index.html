@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="/style.css">
+    <title>my cats</title>
+</head>
+<body>
+    <header>
+        <div class="header__container">
+            <div class="header__cat_left">
+            </div>
+            <h1 class="header__text">Welcome to the party</h1>
+            <div class="header__cat_right"></div>
+        </div>
+    </header>
+    <button class="add btn">
+        <i class="fa-solid fa-plus"></i>
+    </button>
+    <div class="wrapper"></div>
+    <div class="modal_block">
+        <div class="modal">
+            <button class="modal-close btn">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2 class="kotek">Добавить котэка</h2>
+            <form name="add">
+                <fieldset>
+                  <legend>Котик в цифрах</legend>
+                    <p>возраст кота <input type='number' name="age"></p>
+                    <p>рейтинг кошки <input type='number' min="0" max="10" name="rate" placeholder='от 1 до 10'></p>
+                </fieldset>
+                <fieldset>
+                  <legend>Детали словами</legend>
+                  <div>
+                    <label>
+                        <input type='checkbox' name="favorite">
+                        Любимец?
+                    </label>
+                </div>
+                    <p>Фото кисы <input type='text' name="image"></p>
+                    <p><input type="text" placeholder="имя кисы" name="name"></p>
+                    <p>Описание</p>
+                    <textarea placeholder='Опишите, максимально подробно вашего котейку' name="description"></textarea>
+                </fieldset>
+                <div class="preview"></div>
+                <button class="send" type="submit">Добавить</button>
+              </form>
+        </div>
+    </div>
+    <div class="about_cat">
+        <div class="about_cat__window">
+            <button class="about_cat__close">Закрыть</button>
+            <h2>Подробности о котейке</h2>
+            <img src="#" alt="#" class="about_cat__image">
+            <h2 class="about_cat__name"></h2>
+            <div class="about_cat__rate"></div>
+            <div class="about_cat__age"></div>
+            <div class="about_cat__descript"></div>
+        </div>
+    </div>
+<script src="js/function.js"></script>
+<script src="js/global.js"></script>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,273 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background-color: rgb(87, 87, 138);
+}
+
+h2 {
+    margin: 0;
+}
+
+.wrapper {
+    min-height: 100vh;
+    background-image: url(https://pic.rutubelist.ru/video/72/15/72155aea57a24533cc0fb5356127abc8.jpg);
+    background-repeat: no-repeat;
+    background-size: 130%;
+    max-width: 1020px;
+    padding: 30px;
+    margin: auto;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-content: flex-start;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding-bottom: 12px;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 15px yellow;
+    position: relative;
+    color: white;
+}
+
+.card .like {
+    position: absolute;
+    right: 8px;
+    bottom: 8px;
+    color: rgb(47, 255, 6);
+    cursor: pointer;
+}
+
+.card .pic {
+    height: 100px;
+    width: 100%;
+    background-color: rgb(129, 183, 230);
+    background-image: url(https://lookw.ru/8/828/1476173423-125.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.pic.tmp {
+    background-image: url(/img/cat-png-png-file-name-cat-1500.png);
+    background-size: contain;
+}
+
+.btn {
+    outline: none;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color:  rgb(47, 255, 6);
+    color: blue;
+    font-size: 120%;
+    cursor: pointer;
+} 
+
+.btn:hover {
+    background-color: azure;
+    transform: scale(1.1, 1.1);
+}
+
+.modal-close {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+}
+
+.add {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.modal_block {
+    background-color: #ffe4c4c7;
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal_block.active {
+    display: flex;
+}
+
+.modal {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    width: calc(100% - 100px);
+    max-width: 300px;
+    max-height: calc(100% - 100px);
+    overflow: auto;
+    position: relative;
+}
+
+textarea {
+    width: 240px;
+}
+
+.kotek {
+    margin-bottom: 10px;
+}
+
+.send {
+    margin: 10px 100px 0px;
+}
+
+form {
+    display: grid;
+    margin-top: 16px;
+    gap: 8px;
+}
+
+input:not([type = 'checkbox']) {
+    width: 100%;
+    box-sizing: border-box;
+    height: 25px;
+}
+
+.preview {
+    height: 200px;
+    background-color: rgb(238, 151, 37);
+    border-radius: 8px;
+    background-image: url(img/cat-png-png-file-name-cat-1500.png);
+    background-position: center;
+    background-size: cover;
+}
+
+.header__container {
+    margin: auto;
+    display: flex;
+    height: 200px;
+    width: 1020px;
+    gap: 20px;
+    background-image: url(https://pic.rutubelist.ru/video/72/15/72155aea57a24533cc0fb5356127abc8.jpg);
+    background-position-y: 35%;
+    background-repeat: no-repeat;
+    background-size: 130%;
+}
+
+.header__cat_left {
+    background-image: url(img/cat1.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20%;
+    height: auto;
+}
+
+.header__cat_right {
+    background-image: url(img/cat2.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 20%;
+    height: auto;
+}
+
+.header__text {
+    border: 2px solid rgb(122, 122, 114);
+    display: flex;
+    align-items: center;
+    background-color: aqua;
+    color: rgb(94, 86, 86);
+    height: fit-content;
+    margin: auto;
+}
+
+.send, .about_cat__close, .about_cat__del, .descript, .remove {
+    background-color:  rgb(47, 255, 6);
+    color: blue;
+}
+
+.about_cat {
+    background-color: #ffe4c4c7;
+    backdrop-filter: blur(2px);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_cat.activs {
+    display: flex;
+}
+
+.about_cat__window {
+    background-color: white;
+    padding: 16px;
+    border-radius: 8px;
+    width: calc(100% - 100px);
+    max-width: 600px;
+    max-height: calc(100% - 100px);
+    overflow: auto;
+}
+
+.descript, .about_cat__close, .remove {
+    cursor: pointer;
+    outline: none;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.descript:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.remove:hover {
+    background-color: black;
+    transform: scale(1.1, 1.1);
+    color: white;
+}
+
+.about_cat__window {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.about_cat__window h2 {
+    padding: 10px;
+    text-align: center;
+}
+
+.about_cat__image {
+    height: 300px;
+    width: auto;
+    padding: 10px;
+    border: 3px solid aqua;
+    border-radius: 10px;
+}
+
+.about_cat__close, .about_cat__del {
+    margin: 10px;
+}
+
+.about_cat__rate {
+    background-color: aqua;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.about_cat__age, .about_cat__descript {
+    padding: 10px;
+}
+
